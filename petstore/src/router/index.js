@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Form from '@/compnents/Form'
-import Main from '@/components/Main'
+import Form from '../components/Form'
+import Main from '../components/Main'
 
 Vue.use(Router)
 
