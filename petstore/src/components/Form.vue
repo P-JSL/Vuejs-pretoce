@@ -56,8 +56,8 @@
                 <div class="col-md-6 boxes">
                   <input id="gift"
                     v-model="order.gift" type="checkbox"
-                    v-bind:false-value="order.dontSendGift"
                     v-bind:true-value="order.sendGift"
+                    v-bind:false-value="order.dontSendGift"
                     value="true">
                   <label for="checkbox">선물로 보내기?</label>
                 </div>
