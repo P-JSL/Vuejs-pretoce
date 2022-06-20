@@ -9,26 +9,24 @@
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </head>
 <body>
-    <div id="app">
-        <my-component :my-info="message" inline-template>
-            <div>
-                <p>
-                    inline-template - {{myInfo}}
-                </p>
-            </div>
-        </my-component>
+<div id="app">
+    <div class="id">
+        <book-component></book-component>
     </div>
+</div>
 <script>
-    const MyComponent = {
-        props : ['myInfo']
+    const BookComponent = function(resolve,reject){
+        setTimeout(function(){
+            resolve({
+                template:`<div><h1>비동기 컴포턴트</h1></div>`
+            })
+        },1000)
     }
+
     new Vue({
         el:'#app',
-        components : {'my-component' : MyComponent},
-        data(){
-            return {
-                message : "안녕"
-            }
+        components : {
+            'book-component' : BookComponent
         }
     });
 </script>
