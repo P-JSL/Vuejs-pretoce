@@ -8,9 +8,13 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 require("./assets/app.css")
 import {store} from "../store/store";
+import './firebase'
+import VueFire from 'vuefire'
+
 
 Vue.config.productionTip = false
 Vue.use(BootstrapVue)
+Vue.use(VueFire)
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
